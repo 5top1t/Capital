@@ -1,9 +1,5 @@
 """
-Bank transaction factory
-"""
-
-"""
-Manage a new account
+Manage a bank account
 """
 
 import os
