@@ -16,17 +16,17 @@ from ..analysis.transform import StandardTransform
 DEFAULT_DIR = "/Users/jarry/Downloads"
 
 class AccountFactory(StandardTransform):
-    cmd_option = ""
+    arg = ""
 
-    def __init__(self, cmd_option, account, payment_payees, rename_columns):
-        self.cmd_option = cmd_option
+    def __init__(self, arg, account, payment_payees, rename_columns):
+        self.arg = arg
         self.account = account
         self.payment_payees = payment_payees
         self.rename_columns = rename_columns
 
-    def run(self, filename):
+    def run(self, filename, date):
         self._read_activity_history(filename)
-        self.process()
+        self.process(date)
         self._write_activity_history()
 
     def _read_activity_history(self, filename):
@@ -39,7 +39,7 @@ class AccountFactory(StandardTransform):
     def _write_activity_history(self):
         now = datetime.now()
         dest_path = os.path.join(DEFAULT_DIR, "{}-{}.csv".format(
-                                 self.cmd_option, now.strftime("%Y-%m-%d-%f")))
+                                 self.arg, now.strftime("%Y-%m-%d-%f")))
         
         with open(dest_path, 'w+') as csvfile:
             writer = csv.DictWriter(csvfile, fieldnames=self.header)

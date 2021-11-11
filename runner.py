@@ -1,18 +1,15 @@
 import argparse
-from bank import (BankOfAmerica, CapitalOne)
-from options import (BOA_ARG, CAPONE_ARG)
+from bank import (BankManager, BANK_ARGS)
 
-boa = BankOfAmerica(BOA_ARG)
-capone = CapitalOne(CAPONE_ARG)
+manager = BankManager()
 
 parser = argparse.ArgumentParser(description="Financial runner argument parser")
 parser.add_argument(
-    '-bank', choices=[BOA_ARG, CAPONE_ARG], help='Transaction processor')
+    '-bank', choices=BANK_ARGS, help='Transaction processor')
 parser.add_argument(
-    '-fp', help='Transaction file path')
+    '-file', help='Transaction file path')
+parser.add_argument(
+    '-date', help='Filter transaction on or after this date')
 args = parser.parse_args()
 
-if args.bank == BOA_ARG:
-    boa.run(args.fp)
-if args.bank == CAPONE_ARG:
-    capone.run(args.fp)
+manager.run(args)

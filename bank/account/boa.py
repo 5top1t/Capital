@@ -5,6 +5,7 @@ Bank of America Account
 from .factory import AccountFactory
 
 account = "BoA - Play Yourself"
+arg = "boa"
 payment_payees = ["Online payment from CHK"]
 rename_columns = {
     "Posted Date": "posted date",
@@ -13,5 +14,6 @@ rename_columns = {
 }
 
 class BankOfAmerica(AccountFactory):
-    def __init__(self, cmd_option):
-        super(BankOfAmerica, self).__init__(cmd_option, account, payment_payees,rename_columns)
+    def __init__(self):
+        super(BankOfAmerica, self).__init__(
+            arg, account, payment_payees, rename_columns)

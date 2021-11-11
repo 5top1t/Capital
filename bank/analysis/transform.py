@@ -2,6 +2,7 @@
 Prepare data for analysis
 """
 
+from datetime import datetime
 from ..transaction.history import History
 
 class TranslationsTransform(History):
@@ -24,6 +25,11 @@ class AccountTransform(History):
         if self.account:
             for i in range(len(self.rows)):
                 self.rows[i][self.account_key] = self.account
+                
+class AbsoluteChargedAmountTransform(History):
+    def _abs_value_cost_transform(self):
+        for i in range(len(self.rows)):
+            self.rows[i][self.cost_key] = abs(float(self.rows[i][self.cost_key]))
 
 
 class RenameHeaderTransform(History):
@@ -65,6 +71,20 @@ class PurgeReccurringChargesTransform(History):
 
         for i in range(len(recurring_indices)):
             self.rows.pop(recurring_indices[i] - i)
+            
+class PurgeDateFilterTransform(History):
+    def _delete_date_filter_transform(self, date):
+        filter_indices = []
+        date_format = '%m/%d/%Y'
+        cutoff_date = datetime.strptime(date, date_format)
+
+        for i in range(len(self.rows)):
+            transaction_date = datetime.strptime(self.rows[i][self.posted_date_key], date_format)
+            if transaction_date < cutoff_date:
+                filter_indices.append(i)
+
+        for i in range(len(filter_indices)):
+            self.rows.pop(filter_indices[i] - i)
 
 
 class ScrubTransform(RenameHeaderTransform, PurgeHeaderTransform, PurgePaymentsTransform):
@@ -74,13 +94,16 @@ class ScrubTransform(RenameHeaderTransform, PurgeHeaderTransform, PurgePaymentsT
         self._delete_payment_transactions_transform()
 
 
-class CleanseTransform(TranslationsTransform, PurgeReccurringChargesTransform, AccountTransform):
-    def cleanse(self):
+class CleanseTransform(TranslationsTransform, PurgeReccurringChargesTransform, AccountTransform, AbsoluteChargedAmountTransform, PurgeDateFilterTransform):
+    def cleanse(self, date):
         self._translations_transform()
+        self._delete_date_filter_transform(date)
         self._delete_reccuring_transactions_transform()
         self._add_account_column_transform()
+        self._abs_value_cost_transform()
+        
 
 class StandardTransform(ScrubTransform, CleanseTransform):
-    def process(self):
+    def process(self, date):
         self.scrub()
-        self.cleanse()
+        self.cleanse(date)

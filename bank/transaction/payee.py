@@ -42,6 +42,8 @@ class PayeeTranslation:
             self.name >= other
 
 AMAZON = PayeeTranslation("Amazon Marketplace", ["AMZN Mktp", "AMZNAMZN.COM/BILLWA"])
+AMAZON_WEB_SERVICES = PayeeTranslation(
+    "Amazon Web Services", ["Amazon web services aws.amazon.coWA"])
 JET_BLUE = PayeeTranslation("JetBlue", ["JETBLUE"])
 EXPEDIA = PayeeTranslation("Expedia", ["EXPEDIA"])
 STAPLES = PayeeTranslation("Staples", ["STAPLES"])
@@ -62,6 +64,7 @@ COACHING = PayeeTranslation("Personal coach", ["PAYPAL *MARIALIZARR", "MARIALIZA
 EASTERN_MARKET = PayeeTranslation("Eastern Market", ["EASTERN MARKET"])
 DOLLAR_TREE = PayeeTranslation("Dollar Tree", ["DOLLAR TREE"])
 USPS = PayeeTranslation("USPS", ["USPS"])
+YMCA = PayeeTranslation("YMCA", ["YMCA METRO NORTH"])
 
 ALL_PAYEE_TRANSLATIONS = [
     AMAZON,
@@ -87,4 +90,4 @@ ALL_PAYEE_TRANSLATIONS = [
     USPS
 ]
 
-RECURRING_PAYEE_TRANSLATIONS = [HARVARD_BUSSINESS_REVIEW, COACHING]
+RECURRING_PAYEE_TRANSLATIONS = [HARVARD_BUSSINESS_REVIEW, COACHING, AMAZON_WEB_SERVICES, YMCA]
