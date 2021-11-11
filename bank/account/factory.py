@@ -24,6 +24,11 @@ class AccountFactory(StandardTransform):
         self._read_activity_history(filename)
         self.process(month, start_date)
         self._write_activity_history()
+        
+    def run(self, args):
+        self._read_activity_history(args.file)
+        self.process(args)
+        self._write_activity_history()
 
     def _read_activity_history(self, filename):
         with open(filename, 'r') as csvfile:

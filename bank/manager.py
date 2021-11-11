@@ -11,6 +11,6 @@ class BankManager(object):
 
     def run(self, args):
         if args.bank == self.boa.arg:
-            self.boa.run(args.file, int(args.month), args.date)
+            self.boa.run(args)
         if args.bank == self.capone.arg:
-            self.capone.run(args.file, int(args.month), args.date)
+            self.capone.run(args)

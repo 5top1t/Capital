@@ -99,8 +99,12 @@ class PurgeMonthFilterTransform(History):
             if transaction_date.month != month:
                 month_filter_indices.append(i)
 
+
+        print(len(month_filter_indices))
         for i in range(len(month_filter_indices)):
             self.rows.pop(month_filter_indices[i] - i)
+            
+        print(len(self.rows))
 
 
 class ScrubTransform(RenameHeaderTransform, PurgeHeaderTransform, PurgePaymentsTransform):
@@ -117,17 +121,18 @@ class CleanseTransform(
         NegateChargedAmountTransform,
         PurgeStarteDateTransform,
         PurgeMonthFilterTransform):
-    def cleanse(self, month, start_date):
-        self._delete_start_date_transform(start_date)
-        self._delete_month_transform(month)
+    def cleanse(self, args):
+        if args.date:
+            self._delete_start_date_transform(args.date)
+        if args.month:
+            self._delete_month_transform(int(args.month))
         self._translations_transform()
         self._delete_reccuring_transactions_transform()
         self._add_account_column_transform()
         self._abs_value_cost_transform()
-
-        
-
+    
 class StandardTransform(ScrubTransform, CleanseTransform):
-    def process(self, month, start_date):
+    
+    def process(self, args):
         self.scrub()
-        self.cleanse(month, start_date)
+        self.cleanse(args)
