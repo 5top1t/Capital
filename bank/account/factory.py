@@ -20,9 +20,9 @@ class AccountFactory(StandardTransform):
         self.payment_payees = payment_payees
         self.rename_columns = rename_columns
 
-    def run(self, filename, date):
+    def run(self, filename, month, start_date):
         self._read_activity_history(filename)
-        self.process(date)
+        self.process(month, start_date)
         self._write_activity_history()
 
     def _read_activity_history(self, filename):

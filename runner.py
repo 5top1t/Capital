@@ -9,7 +9,10 @@ parser.add_argument(
 parser.add_argument(
     '-file', help='Transaction file path')
 parser.add_argument(
+    '-month', help='Select transcations for this month')
+parser.add_argument(
     '-date', help='Filter transaction on or after this date')
+
 args = parser.parse_args()
 
 manager.run(args)

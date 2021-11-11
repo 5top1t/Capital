@@ -43,7 +43,7 @@ class PayeeTranslation:
 
 AMAZON = PayeeTranslation("Amazon Marketplace", ["AMZN Mktp", "AMZNAMZN.COM/BILLWA"])
 AMAZON_WEB_SERVICES = PayeeTranslation(
-    "Amazon Web Services", ["Amazon web services aws.amazon.coWA"])
+    "Amazon Web Services", ["Amazon web services"])
 JET_BLUE = PayeeTranslation("JetBlue", ["JETBLUE"])
 EXPEDIA = PayeeTranslation("Expedia", ["EXPEDIA"])
 STAPLES = PayeeTranslation("Staples", ["STAPLES"])
@@ -53,7 +53,8 @@ UBER = PayeeTranslation("Uber", ["UBER TRIP"])
 COMMUTER_RAIL = PayeeTranslation("Commuter Rail", ["COMMUTER RAIL SOUTH"])
 ICON_CLUB = PayeeTranslation("Icon Club", ["ICON BOSTON MA"])
 BIJOU_CLUB = PayeeTranslation("Bijou Club", ["THE BIJOU BOSTON"])
-GAS = PayeeTranslation("Gas", ["SHELL OIL", "A.L. PRIME"])
+HAVANA_CLUB = PayeeTranslation("Havana Club", ["HAVANA CLUB"])
+GAS = PayeeTranslation("Gas", ["SHELL OIL", "A.L. PRIME", "EXXONMOBIL"])
 MACYS = PayeeTranslation("Macy's", ["MACYS  NORTHSHORE"])
 TACO_BELL = PayeeTranslation("Taco Bell", ["TACO BELL"])
 TASTY_BURGER = PayeeTranslation("Tasty Burger", ["TASTY BURGER"])
@@ -65,6 +66,15 @@ EASTERN_MARKET = PayeeTranslation("Eastern Market", ["EASTERN MARKET"])
 DOLLAR_TREE = PayeeTranslation("Dollar Tree", ["DOLLAR TREE"])
 USPS = PayeeTranslation("USPS", ["USPS"])
 YMCA = PayeeTranslation("YMCA", ["YMCA METRO NORTH"])
+APPLE = PayeeTranslation("Apple", ["APPLE.COM/BILL"])
+WAFFLE_HOUSE = PayeeTranslation("Waffle House", ["WAFFLE HOUSE"])
+PARKING = PayeeTranslation("Parking", ["PARKING"])
+BOSTON_GLOBE = PayeeTranslation("Boston Globe", ["BOSTON GLOBE"])
+AMERICAN_DELI = PayeeTranslation("American Deli", ["AMERICAN DELI"])
+EAST_POLE_COFFEE = PayeeTranslation("East Poole Coffee", ["EASTPOLECOFFEECO"])
+SUSTAINABLE_HOME = PayeeTranslation("Sustainable Home", ["SUSTAINABLE HOME"])
+THE_PRINT_SHOP = PayeeTranslation("The Print Shop", ["THE PRINT SHOP"])
+COMCAST = PayeeTranslation("Comcast", ["COMCAST"])
 
 ALL_PAYEE_TRANSLATIONS = [
     AMAZON,
@@ -90,4 +100,5 @@ ALL_PAYEE_TRANSLATIONS = [
     USPS
 ]
 
-RECURRING_PAYEE_TRANSLATIONS = [HARVARD_BUSSINESS_REVIEW, COACHING, AMAZON_WEB_SERVICES, YMCA]
+RECURRING_PAYEE_TRANSLATIONS = [
+    HARVARD_BUSSINESS_REVIEW, COACHING, AMAZON_WEB_SERVICES, YMCA, BOSTON_GLOBE, COMCAST]
