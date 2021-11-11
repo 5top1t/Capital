@@ -64,9 +64,10 @@ class PurgePaymentsTransform(History):
 class PurgeReccurringChargesTransform(History):
     def _delete_reccuring_transactions_transform(self):
         recurring_indices = []
+        recurring_payees = [t.name for t in self.recurring_payee_translations]
 
         for i in range(len(self.rows)):
-            if self.rows[i][self.payee_key] in self.recurring_payee_translations:
+            if self.rows[i][self.payee_key] in recurring_payees:
                 recurring_indices.append(i)
 
         for i in range(len(recurring_indices)):
@@ -119,10 +120,11 @@ class CleanseTransform(
     def cleanse(self, month, start_date):
         self._delete_start_date_transform(start_date)
         self._delete_month_transform(month)
+        self._translations_transform()
         self._delete_reccuring_transactions_transform()
         self._add_account_column_transform()
         self._abs_value_cost_transform()
-        self._translations_transform()
+
         
 
 class StandardTransform(ScrubTransform, CleanseTransform):
