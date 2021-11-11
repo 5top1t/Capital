@@ -100,12 +100,8 @@ class PurgeMonthFilterTransform(History):
                 month_filter_indices.append(i)
 
 
-        print(len(month_filter_indices))
         for i in range(len(month_filter_indices)):
             self.rows.pop(month_filter_indices[i] - i)
-            
-        print(len(self.rows))
-
 
 class ScrubTransform(RenameHeaderTransform, PurgeHeaderTransform, PurgePaymentsTransform):
     def scrub(self):

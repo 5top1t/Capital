@@ -57,6 +57,10 @@ HAVANA_CLUB = PayeeTranslation("Havana Club", ["HAVANA CLUB"])
 GAS = PayeeTranslation("Gas", ["SHELL OIL", "A.L. PRIME", "EXXONMOBIL"])
 MACYS = PayeeTranslation("Macy's", ["MACYS  NORTHSHORE"])
 TACO_BELL = PayeeTranslation("Taco Bell", ["TACO BELL"])
+BUENA_VIDA = PayeeTranslation("Buena Vida ATL", ["BUENA VIDA ATLANTA"])
+BAR_VEGAN = PayeeTranslation("Bar Vegan ATL", ["BAR VEGAN ATLANTA"])
+CRAZY_GOOD_KITCHEN = PayeeTranslation(
+    "Crazy Good Kitchen", ["CRAZY GOOD KITCHEN"])
 TASTY_BURGER = PayeeTranslation("Tasty Burger", ["TASTY BURGER"])
 PANDA_EXPRESS = PayeeTranslation("Panda Express", ["PANDA EXPRESS"])
 CHIPOTLE = PayeeTranslation("Chipotle", ["CHIPOTLE"])
@@ -75,6 +79,13 @@ EAST_POLE_COFFEE = PayeeTranslation("East Poole Coffee", ["EASTPOLECOFFEECO"])
 SUSTAINABLE_HOME = PayeeTranslation("Sustainable Home", ["SUSTAINABLE HOME"])
 THE_PRINT_SHOP = PayeeTranslation("The Print Shop", ["THE PRINT SHOP"])
 COMCAST = PayeeTranslation("Comcast", ["COMCAST"])
+INTEREST_CHARGED = PayeeTranslation("Interest Charged", ["INTEREST CHARGED"])
+CNBC = PayeeTranslation("CNBC ATL", ["CNBC ATLANTA"])
+THE_VILLAGE_SMOKEHOUSE = PayeeTranslation("The Village SmokeHouse Bar", ["THE VILLAGE SMOKEHOUSE"])
+FIVE_GUYS = PayeeTranslation("5 Guys", ["5GUYS"])
+EL_JEFE = PayeeTranslation("El Jefe Taqueria", ["EL JEFE'S TAQUERIA"])
+CVS_PHARMACY = PayeeTranslation("CVS", ["CVS/PHARMACY"])
+
 
 ALL_PAYEE_TRANSLATIONS = [
     AMAZON,
@@ -107,8 +118,19 @@ ALL_PAYEE_TRANSLATIONS = [
     EAST_POLE_COFFEE,
     SUSTAINABLE_HOME,
     THE_PRINT_SHOP,
-    COMCAST 
+    COMCAST,
+    HAVANA_CLUB,
+    INTEREST_CHARGED,
+    BUENA_VIDA,
+    BAR_VEGAN,
+    CRAZY_GOOD_KITCHEN,
+    AMAZON_WEB_SERVICES,
+    CNBC,
+    THE_VILLAGE_SMOKEHOUSE,
+    FIVE_GUYS,
+    EL_JEFE,
+    CVS_PHARMACY
 ]
 
 RECURRING_PAYEE_TRANSLATIONS = [
-    HARVARD_BUSSINESS_REVIEW, COACHING, AMAZON_WEB_SERVICES, YMCA, BOSTON_GLOBE, COMCAST]
+    HARVARD_BUSSINESS_REVIEW, COACHING, AMAZON_WEB_SERVICES, YMCA, BOSTON_GLOBE, COMCAST, AMAZON_WEB_SERVICES]
