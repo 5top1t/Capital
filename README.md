@@ -30,7 +30,7 @@ alias capital="python3 {path}/Capital/runner.py"
 | -bank  | Bank to be processed | String | `capone`, `boa` |
 | -file  | Transaction exports file path | CSV |
 | -month | Filter transactions for the given month | Number | `1-12` |
-| -date | Filter transactions after a given date | Date | `mm/dd/yyy` |
+| -date | Filter transactions after a given date (inclusive) | Date | `mm/dd/yyy` |
 
 ### Example
 Clean Bank of America transactions for November after the 9th.
