@@ -5,8 +5,8 @@ Credit card transactions are hard to grok at a glance due to noise. Payments ble
 
 ### __Banks__
 Supported
-- Bank of America
-- Capital One
+- Bank of America - `boa`
+- Capital One - `capone`
   
 Coming soon
 - Apple
