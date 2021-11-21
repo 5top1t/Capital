@@ -19,7 +19,7 @@ Coming soon
 - Filter transactions within a month
 
 # __Getting started__
-Clone __Capital__ to a local directory called __path__ and create an alias for it. 
+Clone __Capital__ to a local directory called `path` and create an alias for it. 
 ```bash
 alias capital="python3 {path}/Capital/runner.py"
 ```
