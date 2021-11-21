@@ -5,8 +5,8 @@ Credit card transactions are hard to grok at a glance due to noise. Payments ble
 
 ### __Banks__
 Supported
-- Bank of America
-- Capital One
+- Bank of America - `boa`
+- Capital One - `capone`
   
 Coming soon
 - Apple
@@ -19,18 +19,18 @@ Coming soon
 - Filter transactions within a month
 
 # __Getting started__
-Clone __Capital__ to a local directory called __path__ and create an alias for it. 
+Clone __Capital__ to a local directory called `path` and create an alias for it. 
 ```bash
 alias capital="python3 {path}/Capital/runner.py"
 ```
 
 ### Arguments
-| Option | Description |  Type  |  Options  |
-| ------ | ----------- | ------ | -------- | 
-| -bank  | Bank to be processed | String | `capone`, `boa` |
-| -file  | Transaction exports file path | CSV |
-| -month | Filter transactions for the given month | Number | `1-12` |
-| -date | Filter transactions after a given date (inclusive) | Date | `mm/dd/yyy` |
+| Option | Description |  Type  |  Options  | Required |
+| ------ | ----------- | ------ | -------- | --- |
+| -bank  | Bank to be processed | String | `capone`, `boa` | ✔️ |
+| -file  | Transaction exports file path | CSV | | ✔️ |
+| -month | Filter transactions for the given month | Number | `1-12` |  |
+| -date | Filter transactions after a given date (inclusive) | Date | `mm/dd/yyy` |  |
 
 ### Example
 Clean Bank of America transactions for November after the 9th.
