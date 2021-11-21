@@ -48,7 +48,7 @@ JET_BLUE = PayeeTranslation("JetBlue", ["JETBLUE"])
 EXPEDIA = PayeeTranslation("Expedia", ["EXPEDIA"])
 STAPLES = PayeeTranslation("Staples", ["STAPLES"])
 PRICERITE = PayeeTranslation("PriceRite", ["PRICERITE"])
-WALMART = PayeeTranslation("Walmart", ["WAL-MART"])
+WALMART = PayeeTranslation("Walmart", ["WAL-MART", "WM SUPERCENTER"])
 UBER = PayeeTranslation("Uber", ["UBER TRIP"])
 COMMUTER_RAIL = PayeeTranslation("Commuter Rail", ["COMMUTER RAIL SOUTH"])
 ICON_CLUB = PayeeTranslation("Icon Club", ["ICON BOSTON MA"])
@@ -72,7 +72,7 @@ USPS = PayeeTranslation("USPS", ["USPS"])
 YMCA = PayeeTranslation("YMCA", ["YMCA METRO NORTH"])
 APPLE = PayeeTranslation("Apple", ["APPLE.COM/BILL"])
 WAFFLE_HOUSE = PayeeTranslation("Waffle House", ["WAFFLE HOUSE"])
-PARKING = PayeeTranslation("Parking", ["PARKING"])
+PARKING = PayeeTranslation("Parking", ["PARKING", "PAS*PASSPT"])
 BOSTON_GLOBE = PayeeTranslation("Boston Globe", ["BOSTON GLOBE"])
 AMERICAN_DELI = PayeeTranslation("American Deli", ["AMERICAN DELI"])
 EAST_POLE_COFFEE = PayeeTranslation("East Poole Coffee", ["EASTPOLECOFFEECO"])
@@ -85,6 +85,8 @@ THE_VILLAGE_SMOKEHOUSE = PayeeTranslation("The Village SmokeHouse Bar", ["THE VI
 FIVE_GUYS = PayeeTranslation("5 Guys", ["5GUYS"])
 EL_JEFE = PayeeTranslation("El Jefe Taqueria", ["EL JEFE'S TAQUERIA"])
 CVS_PHARMACY = PayeeTranslation("CVS", ["CVS/PHARMACY"])
+HOME_DEPOT = PayeeTranslation("Home Depot", ["THE HOME DEPOT"])
+NOTION = PayeeTranslation("Notion", ["NOTION LABS"])
 
 
 ALL_PAYEE_TRANSLATIONS = [
@@ -129,7 +131,9 @@ ALL_PAYEE_TRANSLATIONS = [
     THE_VILLAGE_SMOKEHOUSE,
     FIVE_GUYS,
     EL_JEFE,
-    CVS_PHARMACY
+    CVS_PHARMACY,
+    HOME_DEPOT,
+    NOTION
 ]
 
 RECURRING_PAYEE_TRANSLATIONS = [
