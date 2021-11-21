@@ -87,6 +87,13 @@ EL_JEFE = PayeeTranslation("El Jefe Taqueria", ["EL JEFE'S TAQUERIA"])
 CVS_PHARMACY = PayeeTranslation("CVS", ["CVS/PHARMACY"])
 HOME_DEPOT = PayeeTranslation("Home Depot", ["THE HOME DEPOT"])
 NOTION = PayeeTranslation("Notion", ["NOTION LABS"])
+WHOLE_FOODS = PayeeTranslation("Whole Foods Market", ["WHOLEFDS"])
+CAR_WASH = PayeeTranslation("Car Wash", ["CAR WASH", "SIMONIZ CAR WASH"])
+LIQUOR = PayeeTranslation("Liquor", ["LYNNWAY LIQUORS"])
+NBA_LEAGUE_PASS = PayeeTranslation("NBA League Pass", ["NBA LEAGUE"])
+PIZZERIA = PayeeTranslation("Pizzeria", ["PIZZERIA"])
+ESTEFANIS = PayeeTranslation("Estefani's", ["ESTEFANI"])
+CITY_BAR = PayeeTranslation("City Bay Back Bay", ["CITY BAR"])
 
 
 ALL_PAYEE_TRANSLATIONS = [
@@ -133,7 +140,14 @@ ALL_PAYEE_TRANSLATIONS = [
     EL_JEFE,
     CVS_PHARMACY,
     HOME_DEPOT,
-    NOTION
+    NOTION,
+    WHOLE_FOODS,
+    CAR_WASH,
+    LIQUOR,
+    NBA_LEAGUE_PASS,
+    PIZZERIA,
+    ESTEFANIS,
+    CITY_BAR
 ]
 
 RECURRING_PAYEE_TRANSLATIONS = [
