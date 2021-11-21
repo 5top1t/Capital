@@ -2,16 +2,17 @@ import argparse
 from bank import (BankManager, BANK_ARGS)
 
 manager = BankManager()
+month_choices = [str(m) for m in range(1,13)]
 
 parser = argparse.ArgumentParser(description="Financial runner argument parser")
 parser.add_argument(
-    '-bank', choices=BANK_ARGS, help='Transaction processor')
+    '-bank', choices=BANK_ARGS, help='Bank to be processed', required=True)
 parser.add_argument(
-    '-file', help='Transaction file path')
+    '-file', help='Transaction export file path', required=True)
 parser.add_argument(
-    '-month', help='Select transcations for this month')
+    '-month', choices=month_choices, help='Filter transactions for the given month')
 parser.add_argument(
-    '-date', help='Filter transaction on or after this date')
+    '-date', help='Filter transactions after a given date (inclusive)')
 
 args = parser.parse_args()
 
