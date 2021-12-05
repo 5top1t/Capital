@@ -27,7 +27,7 @@ alias capital="python3 {path}/Capital/runner.py"
 | Option | Description |  Type  |  Options  | Required |
 | ------ | ----------- | ------ | -------- | --- |
 | -bank  | Bank to be processed | String | `apple`, `capone`, `boa` | ✔️ |
-| -file  | Transaction exports file path | CSV | | ✔️ |
+| -file  | Transaction import file path | CSV | | ✔️ |
 | -month | Filter transactions for the given month | Number | `1-12` |  |
 | -date | Filter transactions after a given date (inclusive) | Date | `mm/dd/yyy` |  |
 
