@@ -16,7 +16,6 @@ class TranslationsTransform(History):
                 for synonym in translation.synonyms:
                     if synonym in row[self.merchant_key]:
                         row[self.merchant_key] = translation.name
-                        print(translation.name)
                         is_translated = True
                         break
 
