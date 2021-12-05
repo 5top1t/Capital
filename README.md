@@ -5,11 +5,10 @@ Credit card transactions are hard to grok at a glance due to noise. Payments ble
 
 ### __Banks__
 Supported
+- Apple Card - `apple`
 - Bank of America - `boa`
 - Capital One - `capone`
   
-Coming soon
-- Apple
 ### __Key Features__
 
 - Multiple bank are supported
