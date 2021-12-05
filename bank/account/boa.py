@@ -9,7 +9,7 @@ arg = "boa"
 payment_payees = ["Online payment from CHK"]
 rename_columns = {
     "Posted Date": "posted date",
-    "Payee": "payee",
+    "Payee": "merchant",
     "Amount": "cost"
 }
 

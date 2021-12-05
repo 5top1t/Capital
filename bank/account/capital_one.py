@@ -9,7 +9,7 @@ arg = "capone"
 payment_payees = ["CAPITAL ONE MOBILE PYMT", "CAPITAL ONE AUTOPAY PYMT"]
 rename_columns = {
     "Transaction Date": "posted date",
-    "Description": "payee",
+    "Description": "merchant",
     "Debit": "cost"
 }
 

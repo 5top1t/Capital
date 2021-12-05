@@ -9,13 +9,14 @@ class TranslationsTransform(History):
     def _translations_transform(self):
         for row in self.rows:
             is_translated = False
-            for translation in self.all_payee_translations:
+            for translation in self.all_merchant_translations:
                 if is_translated is True:
                     break
 
                 for synonym in translation.synonyms:
-                    if synonym in row[self.payee_key]:
-                        row[self.payee_key] = translation.name
+                    if synonym in row[self.merchant_key]:
+                        row[self.merchant_key] = translation.name
+                        print(translation.name)
                         is_translated = True
                         break
 
@@ -54,7 +55,7 @@ class PurgePaymentsTransform(History):
 
         for i in range(len(self.rows)):
             for payee in self.payment_payees:
-                if payee in self.rows[i][self.payee_key]:
+                if payee in self.rows[i][self.merchant_key]:
                     payment_indices.append(i)
 
         for i in range(len(payment_indices)):
@@ -64,10 +65,10 @@ class PurgePaymentsTransform(History):
 class PurgeReccurringChargesTransform(History):
     def _delete_reccuring_transactions_transform(self):
         recurring_indices = []
-        recurring_payees = [t.name for t in self.recurring_payee_translations]
+        recurring_payees = [t.name for t in self.recurring_merchant_translations]
 
         for i in range(len(self.rows)):
-            if self.rows[i][self.payee_key] in recurring_payees:
+            if self.rows[i][self.merchant_key] in recurring_payees:
                 recurring_indices.append(i)
 
         for i in range(len(recurring_indices)):
