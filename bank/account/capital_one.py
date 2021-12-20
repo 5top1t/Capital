@@ -6,7 +6,9 @@ from .factory import AccountFactory
 
 account = "Capital One"
 arg = "capone"
-payment_payees = ["CAPITAL ONE MOBILE PYMT", "CAPITAL ONE AUTOPAY PYMT"]
+payment_payees = ["CAPITAL ONE MOBILE PYMT",
+                  "CAPITAL ONE AUTOPAY PYMT",
+                  "CAPITAL ONE ONLINE PYMT"]
 rename_columns = {
     "Transaction Date": "posted date",
     "Description": "merchant",
@@ -16,4 +18,4 @@ rename_columns = {
 class CapitalOne(AccountFactory):
     def __init__(self):
         super(CapitalOne, self).__init__(
-            arg, account, payment_payees, rename_columns)
+            arg, account, payment_payees, rename_columns, date_format="%Y-%m-%d")
