@@ -5,11 +5,10 @@ Credit card transactions are hard to grok at a glance due to noise. Payments ble
 
 ### __Banks__
 Supported
+- Apple Card - `apple`
 - Bank of America - `boa`
 - Capital One - `capone`
   
-Coming soon
-- Apple
 ### __Key Features__
 
 - Multiple bank are supported
@@ -27,8 +26,8 @@ alias capital="python3 {path}/Capital/runner.py"
 ### Arguments
 | Option | Description |  Type  |  Options  | Required |
 | ------ | ----------- | ------ | -------- | --- |
-| -bank  | Bank to be processed | String | `capone`, `boa` | ✔️ |
-| -file  | Transaction exports file path | CSV | | ✔️ |
+| -bank  | Bank to be processed | String | `apple`, `capone`, `boa` | ✔️ |
+| -file  | Transaction import file path | CSV | | ✔️ |
 | -month | Filter transactions for the given month | Number | `1-12` |  |
 | -date | Filter transactions after a given date (inclusive) | Date | `mm/dd/yyy` |  |
 
