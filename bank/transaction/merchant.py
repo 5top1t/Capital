@@ -79,7 +79,6 @@ EAST_POLE_COFFEE = MerchantTranslation("East Poole Coffee", ["EASTPOLECOFFEECO"]
 SUSTAINABLE_HOME = MerchantTranslation("Sustainable Home", ["SUSTAINABLE HOME"])
 THE_PRINT_SHOP = MerchantTranslation("The Print Shop", ["THE PRINT SHOP"])
 COMCAST = MerchantTranslation("Comcast", ["COMCAST"])
-INTEREST_CHARGED = MerchantTranslation("Interest Charged", ["INTEREST CHARGED"])
 CNBC = MerchantTranslation("CNBC ATL", ["CNBC ATLANTA"])
 THE_VILLAGE_SMOKEHOUSE = MerchantTranslation("The Village SmokeHouse Bar", ["THE VILLAGE SMOKEHOUSE"])
 FIVE_GUYS = MerchantTranslation("5 Guys", ["5GUYS"])
@@ -145,7 +144,6 @@ ALL_MERCHANT_TRANSLATIONS = [
     THE_PRINT_SHOP,
     COMCAST,
     HAVANA_CLUB,
-    INTEREST_CHARGED,
     BUENA_VIDA,
     BAR_VEGAN,
     CRAZY_GOOD_KITCHEN,

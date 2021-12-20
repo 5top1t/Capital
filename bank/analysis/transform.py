@@ -19,6 +19,13 @@ class TranslationsTransform(History):
                         is_translated = True
                         break
 
+class InterestTransform(History):
+    def _interests_charge_transform(self):
+        print(self.interest_charges)
+        for row in self.rows:
+            if row[self.merchant_key] in self.interest_charges:
+                row[self.merchant_key] = "Interest charge"
+                break 
 
 class AccountTransform(History):
     def _add_account_column_transform(self):
@@ -109,6 +116,7 @@ class ScrubTransform(RenameHeaderTransform, PurgeHeaderTransform, PurgePaymentsT
 
 class CleanseTransform(
         TranslationsTransform,
+        InterestTransform,
         PurgeReccurringChargesTransform,
         AccountTransform,
         NegateChargedAmountTransform,
@@ -120,6 +128,7 @@ class CleanseTransform(
         if args.month:
             self._delete_month_transform(int(args.month))
         self._translations_transform()
+        self._interests_charge_transform()
         self._delete_reccuring_transactions_transform()
         self._add_account_column_transform()
         self._abs_value_cost_transform()

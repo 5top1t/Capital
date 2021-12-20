@@ -15,10 +15,11 @@ _DEFAULT_DATE_FORMAT = "%m/%d/%Y"
 class AccountFactory(StandardTransform):
     arg = ""
 
-    def __init__(self, arg, account, payment_payees, rename_columns, date_format=None):
+    def __init__(self, arg, account, payment_payees, interest_charges, rename_columns, date_format=None):
         self.arg = arg
         self.account = account
         self.payment_payees = payment_payees
+        self.interest_charges = interest_charges
         self.rename_columns = rename_columns
         self.date_format = date_format if date_format != None else _DEFAULT_DATE_FORMAT
 
