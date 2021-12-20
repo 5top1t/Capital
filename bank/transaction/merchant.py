@@ -106,6 +106,10 @@ STOP_AND_SHOP = MerchantTranslation("Stop & Shop", ["STOP & SHOP"])
 MARKET_BASKET = MerchantTranslation("Market Basket", ["MARKET BASKET"])
 AIRBNB = MerchantTranslation("Airbnb", ["AIRBNB"])
 WIKIPEDIA = MerchantTranslation("Wikipedia Donation", ["WIKIPEDIA"])
+GOOD_LIFE_CLUB = MerchantTranslation("Good Life Club", ["GOOD LIFE"])
+AMC = MerchantTranslation("AMC", ["AMC"])
+MARSHALLS = MerchantTranslation("Marshalls", ["MARSHALLS"])
+WALGREENS = MerchantTranslation("Walgreens", ["WALGREENS"])
 
 
 ALL_MERCHANT_TRANSLATIONS = [
@@ -170,7 +174,11 @@ ALL_MERCHANT_TRANSLATIONS = [
     STOP_AND_SHOP,
     MARKET_BASKET,
     AIRBNB,
-    WIKIPEDIA
+    WIKIPEDIA,
+    GOOD_LIFE_CLUB,
+    AMC,
+    MARSHALLS,
+    WALGREENS
 ]
 RECURRING_MERCHANT_TRANSLATIONS = [
     HARVARD_BUSSINESS_REVIEW, COACHING, AMAZON_WEB_SERVICES, YMCA, BOSTON_GLOBE, COMCAST, AMAZON_WEB_SERVICES]
