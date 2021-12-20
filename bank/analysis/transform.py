@@ -5,6 +5,8 @@ Prepare data for analysis
 from datetime import datetime
 from ..transaction.history import History
 
+INTEREST_CHARGE_MERCHANT = "Interest charge"
+
 class TranslationsTransform(History):
     def _translations_transform(self):
         for row in self.rows:
@@ -21,10 +23,9 @@ class TranslationsTransform(History):
 
 class InterestTransform(History):
     def _interests_charge_transform(self):
-        print(self.interest_charges)
         for row in self.rows:
             if row[self.merchant_key] in self.interest_charges:
-                row[self.merchant_key] = "Interest charge"
+                row[self.merchant_key] = INTEREST_CHARGE_MERCHANT
                 break 
 
 class AccountTransform(History):
