@@ -1,4 +1,5 @@
 import argparse
+import datetime
 from bank import (BankManager, BANK_ARGS)
 
 manager = BankManager()
@@ -12,7 +13,8 @@ parser.add_argument(
 parser.add_argument(
     '-month', choices=month_choices, help='Filter transactions for the given month')
 parser.add_argument(
-    '-date', help='Filter transactions after a given date (inclusive)')
+    '-date',
+    type=lambda s: datetime.datetime.strptime(s, '%m/%d/%Y'), help='Filter transactions after a given date (inclusive)')
 
 args = parser.parse_args()
 

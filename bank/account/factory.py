@@ -10,15 +10,17 @@ from ..analysis.transform import StandardTransform
 
 
 DEFAULT_DIR = "/Users/jarry/Downloads"
+_DEFAULT_DATE_FORMAT = "%m/%d/%Y"
 
 class AccountFactory(StandardTransform):
     arg = ""
 
-    def __init__(self, arg, account, payment_payees, rename_columns):
+    def __init__(self, arg, account, payment_payees, rename_columns, date_format=None):
         self.arg = arg
         self.account = account
         self.payment_payees = payment_payees
         self.rename_columns = rename_columns
+        self.date_format = date_format if date_format != None else _DEFAULT_DATE_FORMAT
 
     def run(self, filename, month, start_date):
         self._read_activity_history(filename)

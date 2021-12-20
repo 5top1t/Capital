@@ -56,10 +56,10 @@ class PurgePaymentsTransform(History):
             for payee in self.payment_payees:
                 if payee in self.rows[i][self.merchant_key]:
                     payment_indices.append(i)
-
+                    
         for i in range(len(payment_indices)):
             self.rows.pop(payment_indices[i] - i)
-
+            
 
 class PurgeReccurringChargesTransform(History):
     def _delete_reccuring_transactions_transform(self):
@@ -74,13 +74,11 @@ class PurgeReccurringChargesTransform(History):
             self.rows.pop(recurring_indices[i] - i)
             
 class PurgeStarteDateTransform(History):
-    def _delete_start_date_transform(self, date):
+    def _delete_start_date_transform(self, start_date):
         date_filter_indices = []
-        date_format = '%m/%d/%Y'
-        start_date = datetime.strptime(date, date_format)
 
         for i in range(len(self.rows)):
-            transaction_date = datetime.strptime(self.rows[i][self.posted_date_key], date_format)
+            transaction_date = datetime.strptime(self.rows[i][self.posted_date_key], self.date_format)
             if start_date > transaction_date:
                 date_filter_indices.append(i)
 
@@ -91,11 +89,10 @@ class PurgeStarteDateTransform(History):
 class PurgeMonthFilterTransform(History):
     def _delete_month_transform(self, month):
         month_filter_indices = []
-        date_format = '%m/%d/%Y'
 
         for i in range(len(self.rows)):
             transaction_date = datetime.strptime(
-                self.rows[i][self.posted_date_key], date_format)
+                self.rows[i][self.posted_date_key], self.date_format)
             if transaction_date.month != month:
                 month_filter_indices.append(i)
 

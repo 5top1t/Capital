@@ -13,7 +13,6 @@ rename_columns = {
     "Amount (USD)": "cost"
 }
 
-
 class Apple(AccountFactory):
     def __init__(self):
         super(Apple, self).__init__(
