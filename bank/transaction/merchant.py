@@ -99,6 +99,13 @@ AFRO_NATION_TICKETS = MerchantTranslation(
     "Afro Nation Tickets", ["FT* FESTICKET"])
 URBAN_OUTFITTERS = MerchantTranslation("Urban Outfitters", ["URBAN-OUTFITTERS "])
 CHAMPION = MerchantTranslation("Champion", ["NEWBURY CHAMPION"])
+POPEYES = MerchantTranslation("Popeyes", ["POPEYES"])
+KHOLS = MerchantTranslation("Kohl's", ["KOHL'S"])
+JOES_NEWBURY = MerchantTranslation("Joe's Newbury", ["JOE'S NEWBURY"])
+STOP_AND_SHOP = MerchantTranslation("Stop & Shop", ["STOP & SHOP"])
+MARKET_BASKET = MerchantTranslation("Market Basket", ["MARKET BASKET"])
+AIRBNB = MerchantTranslation("Airbnb", ["AIRBNB"])
+WIKIPEDIA = MerchantTranslation("Wikipedia Donation", ["WIKIPEDIA"])
 
 
 ALL_MERCHANT_TRANSLATIONS = [
@@ -156,7 +163,14 @@ ALL_MERCHANT_TRANSLATIONS = [
     LAUNDRY,
     AFRO_NATION_TICKETS,
     URBAN_OUTFITTERS,
-    CHAMPION
+    CHAMPION,
+    POPEYES,
+    KHOLS,
+    JOES_NEWBURY,
+    STOP_AND_SHOP,
+    MARKET_BASKET,
+    AIRBNB,
+    WIKIPEDIA
 ]
 RECURRING_MERCHANT_TRANSLATIONS = [
     HARVARD_BUSSINESS_REVIEW, COACHING, AMAZON_WEB_SERVICES, YMCA, BOSTON_GLOBE, COMCAST, AMAZON_WEB_SERVICES]
