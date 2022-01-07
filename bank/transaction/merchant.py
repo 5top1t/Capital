@@ -109,6 +109,11 @@ GOOD_LIFE_CLUB = MerchantTranslation("Good Life Club", ["GOOD LIFE"])
 AMC = MerchantTranslation("AMC", ["AMC"])
 MARSHALLS = MerchantTranslation("Marshalls", ["MARSHALLS"])
 WALGREENS = MerchantTranslation("Walgreens", ["WALGREENS"])
+BURLINGTON = MerchantTranslation("Burlington", ["BURLINGTON STORES"])
+BEST_BUY = MerchantTranslation("Best Buy", ["BEST BUY"])
+EVOLUTION_SALON = MerchantTranslation(
+    "Evolution Artistic Salon", ["EVOLUTION ARTISTIC"])
+HOOK_AND_REEL = MerchantTranslation("Hook & Reel", ["HOOK & REEL INC"])
 
 
 ALL_MERCHANT_TRANSLATIONS = [
@@ -176,7 +181,11 @@ ALL_MERCHANT_TRANSLATIONS = [
     GOOD_LIFE_CLUB,
     AMC,
     MARSHALLS,
-    WALGREENS
+    WALGREENS,
+    BURLINGTON,
+    BEST_BUY,
+    EVOLUTION_SALON,
+    HOOK_AND_REEL
 ]
 RECURRING_MERCHANT_TRANSLATIONS = [
     HARVARD_BUSSINESS_REVIEW, COACHING, AMAZON_WEB_SERVICES, YMCA, BOSTON_GLOBE, COMCAST, AMAZON_WEB_SERVICES]
