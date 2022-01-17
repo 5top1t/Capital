@@ -54,7 +54,8 @@ COMMUTER_RAIL = MerchantTranslation("Commuter Rail", ["COMMUTER RAIL SOUTH"])
 ICON_CLUB = MerchantTranslation("Icon Club", ["ICON BOSTON MA"])
 BIJOU_CLUB = MerchantTranslation("Bijou Club", ["THE BIJOU BOSTON"])
 HAVANA_CLUB = MerchantTranslation("Havana Club", ["HAVANA CLUB"])
-GAS = MerchantTranslation("Gas", ["SHELL OIL", "A.L. PRIME", "EXXONMOBIL"])
+GAS = MerchantTranslation(
+    "Gas", ["SHELL OIL", "A.L. PRIME", "EXXONMOBIL", "SAYHAN INCORPORATION"])
 MACYS = MerchantTranslation("Macy's", ["MACYS NORTHSHORE"])
 TACO_BELL = MerchantTranslation("Taco Bell", ["TACO BELL"])
 BUENA_VIDA = MerchantTranslation("Buena Vida ATL", ["BUENA VIDA ATLANTA"])
@@ -67,7 +68,7 @@ CHIPOTLE = MerchantTranslation("Chipotle", ["CHIPOTLE"])
 HARVARD_BUSSINESS_REVIEW = MerchantTranslation("Harvard Business Review", ["HARVBUSREV"])
 COACHING = MerchantTranslation("Personal coach", ["PAYPAL *MARIALIZARR", "MARIALIZARR"])
 EASTERN_MARKET = MerchantTranslation("Eastern Market", ["EASTERN MARKET"])
-DOLLAR_TREE = MerchantTranslation("Dollar Tree", ["DOLLAR TREE"])
+DOLLAR_TREE = MerchantTranslation("Dollar Tree", ["DOLLAR TREE", "DOLLARTREE"])
 USPS = MerchantTranslation("USPS", ["USPS"])
 YMCA = MerchantTranslation("YMCA", ["YMCA METRO NORTH"])
 APPLE = MerchantTranslation("Apple", ["APPLE.COM/BILL"])
@@ -114,6 +115,12 @@ BEST_BUY = MerchantTranslation("Best Buy", ["BEST BUY"])
 EVOLUTION_SALON = MerchantTranslation(
     "Evolution Artistic Salon", ["EVOLUTION ARTISTIC"])
 HOOK_AND_REEL = MerchantTranslation("Hook & Reel", ["HOOK & REEL INC"])
+FANATIZ = MerchantTranslation("Fanatiz", ["FANATIZ MONTHLY PLAN"])
+FOOT_LOCKER = MerchantTranslation("Foot Locker", ["FOOT LOCKER"])
+MEDIUM = MerchantTranslation("Medium", ["MEDIUM.COM"])
+TEMAZCAL_TEQUILA_CANTI = MerchantTranslation(
+    "Temazcal Tequila", ["TEMAZCAL TEQUILA CANTI"])
+
 
 
 ALL_MERCHANT_TRANSLATIONS = [
@@ -185,7 +192,11 @@ ALL_MERCHANT_TRANSLATIONS = [
     BURLINGTON,
     BEST_BUY,
     EVOLUTION_SALON,
-    HOOK_AND_REEL
+    HOOK_AND_REEL,
+    FANATIZ,
+    FOOT_LOCKER,
+    MEDIUM,
+    TEMAZCAL_TEQUILA_CANTI
 ]
 RECURRING_MERCHANT_TRANSLATIONS = [
     HARVARD_BUSSINESS_REVIEW, COACHING, AMAZON_WEB_SERVICES, YMCA, BOSTON_GLOBE, COMCAST, AMAZON_WEB_SERVICES]
