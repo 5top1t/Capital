@@ -7,7 +7,7 @@ from .factory import AccountFactory
 account = "BoA - Play Yourself"
 arg = "boa"
 payment_payees = ["Online payment from CHK"]
-interest_charges = []
+interest_charges = ["INTEREST CHARGED ON PURCHASES"]
 rename_columns = {
     "Posted Date": "posted date",
     "Payee": "merchant",
