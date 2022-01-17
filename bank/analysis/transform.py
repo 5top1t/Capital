@@ -69,6 +69,19 @@ class PurgePaymentsTransform(History):
             self.rows.pop(payment_indices[i] - i)
             
 
+class PurgeEmptyTransactionsTransform(History):
+    # These transaction may be credits
+    
+    def _delete_empty_transactions_transform(self):
+        payment_indices = []
+
+        for i in range(len(self.rows)):
+            if self.rows[i][self.cost_key] == '':
+                payment_indices.append(i)
+
+        for i in range(len(payment_indices)):
+            self.rows.pop(payment_indices[i] - i)
+
 class PurgeReccurringChargesTransform(History):
     def _delete_reccuring_transactions_transform(self):
         recurring_indices = []
@@ -108,11 +121,12 @@ class PurgeMonthFilterTransform(History):
         for i in range(len(month_filter_indices)):
             self.rows.pop(month_filter_indices[i] - i)
 
-class ScrubTransform(RenameHeaderTransform, PurgeHeaderTransform, PurgePaymentsTransform):
+class ScrubTransform(RenameHeaderTransform, PurgeHeaderTransform, PurgePaymentsTransform, PurgeEmptyTransactionsTransform):
     def scrub(self):
         self._rename_columns_transform()
         self._delete_non_header_columns_transform()
         self._delete_payment_transactions_transform()
+        self._delete_empty_transactions_transform()
 
 
 class CleanseTransform(
