@@ -53,13 +53,14 @@ STAPLES = MerchantTranslation("Staples", ["STAPLES"])
 PRICERITE = MerchantTranslation("PriceRite", ["PRICERITE"])
 WALMART = MerchantTranslation(
     "Walmart", ["WAL-MART", "WM SUPERCENTER", "WALMART"])
-UBER = MerchantTranslation("Uber", ["UBER TRIP"])
+UBER = MerchantTranslation("Uber", ["UBER TRIP", "UBER* TRIP"])
+UBER_EATS = MerchantTranslation("Uber eats", ["UBER EATS"])
 COMMUTER_RAIL = MerchantTranslation("Commuter Rail", ["COMMUTER RAIL SOUTH"])
 ICON_CLUB = MerchantTranslation("Icon Club", ["ICON BOSTON MA"])
 BIJOU_CLUB = MerchantTranslation("Bijou Club", ["THE BIJOU BOSTON"])
 HAVANA_CLUB = MerchantTranslation("Havana Club", ["HAVANA CLUB"])
 GAS = MerchantTranslation(
-    "Gas", ["SHELL OIL", "A.L. PRIME", "EXXONMOBIL", "SAYHAN INCORPORATION"])
+    "Gas", ["SHELL OIL", "A.L. PRIME", "EXXONMOBIL", "SAYHAN INCORPORATION", "CITGO"])
 MACYS = MerchantTranslation("Macy's", ["MACYS NORTHSHORE"])
 TACO_BELL = MerchantTranslation("Taco Bell", ["TACO BELL"])
 BUENA_VIDA = MerchantTranslation("Buena Vida ATL", ["BUENA VIDA ATLANTA"])
@@ -170,10 +171,30 @@ AVIS_RENTAL = MerchantTranslation("Avis Rent-a-car", ["AVIS RENT-A-CAR"])
 BAIA_BEACH_CLUB = MerchantTranslation("Baia Beach Club", ["BAIA BEACH CLUB"])
 TACO_ISLAND = MerchantTranslation("Taco Island", ["TACO ISLAND"])
 LA_BOULANGERIE = MerchantTranslation("La Boulangerie", ["LA BOULANGERIE"])
-
-
+HOOTERS = MerchantTranslation("Hooters", ["HOOTERS"])
+DUNKIN = MerchantTranslation("Dunkin", ["DUNKIN"])
+AXEHABITS = MerchantTranslation("Axe Habits", ["AXEHABITS"])
+AFRO_NATION_CAROLINA = MerchantTranslation(
+    "AfroNation Carolina", ["AFRO NATION CAROLINA", "AFRO NATION BALNEARIO DE CAROLINA"])
+H_M = MerchantTranslation("H&M", ["H&M"])
+WHICH_WHICH = MerchantTranslation("Which Which Sandwiches", ["WHICH WHICH"])
+SUPERBLUE_MIAMI = MerchantTranslation("Superblue Miami", ["SUPERBLUE MIAMI"])
+SARKU_JAPAN = MerchantTranslation("Sarku Japan", ["SARKU JAPAN"])
+BURGER_KING = MerchantTranslation("Burger King", ["BURGER KING"])
+KRISPY_KREME = MerchantTranslation("Krispy Kreme", ["KRISPY KREME"])
+HARD_ROCK = MerchantTranslation("Hard Rock", ["HARD ROCK"])
+TJMAXXX = MerchantTranslation("TJ Maxxx", ["TJMAXX"])
+STARBUCKS = MerchantTranslation("Starbucks", ["STARBUCKS"])
 
 ALL_MERCHANT_TRANSLATIONS = [
+    STARBUCKS,
+    H_M,
+    WHICH_WHICH,
+    SARKU_JAPAN,
+    BURGER_KING,
+    KRISPY_KREME,
+    HARD_ROCK,
+    TJMAXXX,
     LOVENSE,
     FLOWERS,
     GAP,
@@ -278,7 +299,13 @@ ALL_MERCHANT_TRANSLATIONS = [
     TEMAZCAL_TEQUILA_CANTI,
     MBTA,
     HALAL,
-    BURGER_JOINT
+    BURGER_JOINT,
+    UBER_EATS,
+    DUNKIN,
+    HOOTERS,
+    AXEHABITS,
+    AFRO_NATION_CAROLINA
 ]
+
 RECURRING_MERCHANT_TRANSLATIONS = [
     HARVARD_BUSSINESS_REVIEW, COACHING, AMAZON_WEB_SERVICES, YMCA, BOSTON_GLOBE, COMCAST, AMAZON_WEB_SERVICES]
